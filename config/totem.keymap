@@ -90,7 +90,7 @@
 
         Num {
             bindings = <
-        &kp NB_PIPE       &kp NB_N7  &kp NB_N8   &kp NB_N9  &kp NB_PLUS         &trans  &trans           &trans     &trans         &trans
+        &kp NB_PIPE       &kp NB_N7  &kp NB_N8   &kp NB_N9  &kp NB_PLUS         &trans  &trans           &trans     &trans         &kp NB_PLUS
         &kp NB_SQT        &kp NB_N4  &kp NB_N5   &kp NB_N6  &kp NB_BACKSLASH    &trans  &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_WIN
 &trans  &kp NB_LESS_THAN  &kp NB_N1  &kp NB_N2   &kp NB_N3  &kp NB_UMLAUT       &trans  &trans           &trans     &trans         &trans         &trans
                                      &kp NB_DOT  &kp NB_N0  &trans              &trans  &trans           &trans
