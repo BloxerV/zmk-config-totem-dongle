@@ -104,10 +104,19 @@
 
         cuts {
             bindings = <
-        &trans  &trans  &kp RG(L)  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &kp RG(L)  &trans  &trans    &trans  &trans  &trans  &trans  &to 5
         &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans     &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        gaming {
+            bindings = <
+         &kp TAB  &kp N1  &kp N2    &kp N3     &kp N4       &to 0   &trans  &trans  &trans  &trans
+         &kp F21  &kp Q   &kp W     &kp E      &kp R        &trans  &trans  &trans  &trans  &trans
+&kp ESC  &kp F20  &kp A   &kp S     &kp D      &kp F        &trans  &trans  &trans  &trans  &trans  &trans
+                          &kp LALT  &kp LCTRL  &kp SPACE    &trans  &trans  &trans
             >;
         };
     };
