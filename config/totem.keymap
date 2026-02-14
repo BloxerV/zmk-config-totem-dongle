@@ -75,20 +75,20 @@
         Nav {
             display-name = "Nav";
             bindings = <
-              &kp GRAVE       &kp LA(TAB)  &kp UP_ARROW   &kp HOME           &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp DOT
-              &kp LEFT_SHIFT  &kp LEFT     &kp DOWN       &kp RIGHT          &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp LEFT_WIN    &kp LA(F4)   &kp LC(LA(L))  &kp DOUBLE_QUOTES  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
-                                           &trans         &trans             &trans      &trans    &trans        &kp NUMBER_0
+            &kp GRAVE     &kp LA(END)             &kp UP_ARROW            &kp HOME                 &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp DOT
+            &kp APOS      &kp LEFT                &kp DOWN                &kp RIGHT                &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&kp LA(F4)  &kp LEFT_WIN  &kp LG(LC(LEFT_ARROW))  &kp LC(LG(LEFT_ARROW))  &kp LC(LG(RIGHT_ARROW))  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
+                                                  &trans                  &trans                   &trans      &trans    &trans        &kp NUMBER_0
             >;
         };
 
         Sym {
             display-name = "Sym";
             bindings = <
-        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
-        &kp CAPS  &trans  &trans    &trans      &trans         &trans     &trans         &trans           &login   &trans
-&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
-                          &trans    &trans      &trans         &trans     &trans         &trans
+        &kp EXCL  &kp AT  &kp HASH       &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
+        &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &trans     &trans         &trans           &login   &trans
+&trans  &trans    &trans  &kp PAGE_DOWN  &to 5       &to 4          &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
+                          &trans         &trans      &trans         &trans     &trans         &trans
             >;
         };
 
@@ -104,19 +104,19 @@
 
         cuts {
             bindings = <
-        &trans  &trans  &kp RG(L)  &trans  &trans    &trans  &trans  &trans  &trans  &to 5
-        &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans     &trans  &trans    &trans  &trans  &trans
+         &kp N1  &kp N2  &kp N3     &kp N4    &kp N5       &trans  &trans    &kp UP    &trans     &trans
+         &kp Q   &kp W   &kp E      &kp R     &kp T        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&kp ESC  &kp Y   &kp B   &kp TAB    &kp D     &kp F        &trans  &trans    &trans    &trans     &trans  &trans
+                         &kp LCTRL  &kp LALT  &kp SPACE    &trans  &trans    &trans
             >;
         };
 
         gaming {
             bindings = <
-         &kp TAB  &kp N1  &kp N2    &kp N3     &kp N4       &to 0   &trans  &trans  &trans  &trans
-         &kp F21  &kp Q   &kp W     &kp E      &kp R        &trans  &trans  &trans  &trans  &trans
-&kp ESC  &kp F20  &kp A   &kp S     &kp D      &kp F        &trans  &trans  &trans  &trans  &trans  &trans
-                          &kp LALT  &kp LCTRL  &kp SPACE    &trans  &trans  &trans
+         &kp TAB    &kp N1  &kp N2    &kp N3     &kp N4       &to 0   &trans  &trans  &trans  &trans
+         &kp CAPS   &kp Q   &kp W     &kp E      &kp R        &trans  &trans  &trans  &trans  &trans
+&kp ESC  &kp LSHFT  &kp A   &kp S     &kp D      &kp F        &trans  &trans  &trans  &trans  &trans  &trans
+                            &kp LALT  &kp LCTRL  &kp SPACE    &trans  &trans  &trans
             >;
         };
 
