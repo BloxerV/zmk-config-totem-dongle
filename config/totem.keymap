@@ -104,7 +104,7 @@
 
         cuts {
             bindings = <
-         &kp N1  &kp N2  &kp N3     &kp N4    &kp N5       &trans  &trans    &kp UP    &trans     &trans
+         &kp N1  &kp N2  &kp N3     &kp N4    &kp N5       &trans  &trans    &kp UP    &trans     &to 7
          &kp Q   &kp W   &kp E      &kp R     &kp T        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
 &kp ESC  &kp Y   &kp B   &kp TAB    &kp D     &kp F        &trans  &trans    &trans    &trans     &trans  &trans
                          &kp LCTRL  &kp LALT  &kp SPACE    &trans  &trans    &trans
@@ -132,20 +132,30 @@
         mac {
             display-name = "Base";
             bindings = <
-              &kp Q       &kp W       &kp E          &kp R         &kp T        &kp Y    &kp U        &kp I        &kp O       &kp SEMICOLON
-              &hm LGUI A  &hm LALT S  &hm LCTRL D    &hm LSHIFT F  &kp G        &kp H    &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI P
-&lt 9 ESCAPE  &kp Z       &kp X       &kp C          &kp V         &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp SLASH      &lt 4 BACKSLASH
-                                      &mt LCTRL DEL  &lt 1 TAB     &kp SPACE    &kp RET  &lt 2 BSPC   &kp MINUS
+               &kp Q       &kp W       &kp E          &kp R         &kp T        &kp Y    &kp U        &kp I        &kp O       &kp SEMICOLON
+               &hm LGUI A  &hm LALT S  &hm LCTRL D    &hm LSHIFT F  &kp G        &kp H    &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI P
+&lt 10 ESCAPE  &kp Z       &kp X       &kp C          &kp V         &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp SLASH      &lt 11 BACKSLASH
+                                       &mt LCTRL DEL  &lt 8 TAB     &kp SPACE    &kp RET  &lt 9 BSPC   &kp MINUS
             >;
         };
 
         mac_nav {
             display-name = "Nav";
             bindings = <
-            &kp GRAVE     &kp LA(END)         &kp UP_ARROW  &kp HOME             &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp DOT
-            &kp APOS      &kp LEFT            &kp DOWN      &kp RIGHT            &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LA(F4)  &kp LEFT_WIN  &kp LC(LEFT_ARROW)  &kp LG(Q)     &kp LC(RIGHT_ARROW)  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
-                                              &trans        &trans               &trans      &trans    &trans        &kp NUMBER_0
+            &kp GRAVE  &kp LA(END)         &kp UP_ARROW  &kp HOME             &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp DOT
+            &kp APOS   &kp LEFT            &kp DOWN      &kp RIGHT            &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&kp LA(F4)  &kp TILDE  &kp LC(LEFT_ARROW)  &kp LG(Q)     &kp LC(RIGHT_ARROW)  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
+                                           &trans        &trans               &trans      &trans    &trans        &kp NUMBER_0
+            >;
+        };
+
+        Mac_Sym {
+            display-name = "Sym";
+            bindings = <
+        &kp EXCL  &kp AT  &kp HASH       &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
+        &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &trans     &trans         &trans           &login   &trans
+&trans  &trans    &trans  &kp PAGE_DOWN  &to 5       &to 4          &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
+                          &trans         &trans      &trans         &trans     &trans         &trans
             >;
         };
 
@@ -156,6 +166,15 @@
         &kp F19               &kp F20  &kp F21  &trans          &bootloader    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
 &trans  &kp F22               &kp F23  &kp F24  &trans          &to 0          &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
                                        &trans   &trans          &trans         &trans   &trans   &trans
+            >;
+        };
+
+        Mac_Cuts {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &to 0
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
