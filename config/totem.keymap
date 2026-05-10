@@ -57,6 +57,20 @@
             tap-ms = <40>;
             bindings = <&kp M &kp P &kp NUMBER_8 &kp NUMBER_0 &kp NUMBER_5 &kp NUMBER_3 &kp NUMBER_8>;
         };
+
+        Brak_anomalii: Brak_anomalii {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp B &kp R &kp A &kp K &kp SPACE &kp A &kp N &kp O &kp M &kp A &kp L &kp I &kp I &kp TAB &kp ENTER>;
+            label = "BRAK_ANOMALII";
+        };
+
+        w_normie: w_normie {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp W &kp SPACE &kp N &kp O &kp R &kp M &kp I &kp E &kp TAB &kp ENTER>;
+            label = "W_NORMIE";
+        };
     };
 
     keymap {
@@ -162,10 +176,10 @@
         mac_fun {
             display-name = "Fun";
             bindings = <
-        &kp LA(LS(NUMBER_4))  &kp F17  &kp F18  &studio_unlock  &trans         &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
-        &kp F19               &kp F20  &kp F21  &trans          &bootloader    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
-&trans  &kp F22               &kp F23  &kp F24  &trans          &to 0          &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
-                                       &trans   &trans          &trans         &trans   &trans   &trans
+        &Brak_anomalii  &kp F17  &kp F18  &studio_unlock  &trans         &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
+        &w_normie       &kp F20  &kp F21  &trans          &bootloader    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
+&trans  &kp F22         &kp F23  &kp F24  &trans          &to 0          &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
+                                 &trans   &trans          &trans         &trans   &trans   &trans
             >;
         };
 
