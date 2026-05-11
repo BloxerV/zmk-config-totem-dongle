@@ -196,7 +196,7 @@
             bindings = <
         &kp EXCL  &kp AT  &kp HASH       &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
         &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &trans     &trans         &trans           &login   &trans
-&trans  &trans    &trans  &kp PAGE_DOWN  &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
+&trans  &mail     &trans  &kp PAGE_DOWN  &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
                           &trans         &trans      &trans         &trans     &trans         &trans
             >;
         };
