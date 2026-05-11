@@ -186,7 +186,7 @@
             bindings = <
                       &kp GRAVE  &kp LA(END)         &kp UP_ARROW  &kp HOME             &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp DOT
                       &kp APOS   &kp LEFT            &kp DOWN      &kp RIGHT            &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LG(LS(NUMBER_4))  &kp TILDE  &kp LC(LEFT_ARROW)  &kp LG(Q)     &kp LC(RIGHT_ARROW)  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
+&kp LS(RG(NUMBER_4))  &kp TILDE  &kp LC(LEFT_ARROW)  &kp LG(Q)     &kp LC(RIGHT_ARROW)  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
                                                      &trans        &trans               &trans      &trans    &trans        &kp NUMBER_0
             >;
         };
@@ -204,7 +204,7 @@
         mac_fun {
             display-name = "Fun";
             bindings = <
-        &w_normie       &kopiuj_wklej_ciapki  &kp LG(LS(NUMBER_5))  &studio_unlock  &trans         &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
+        &w_normie       &kopiuj_wklej_ciapki  &kp LS(RG(NUMBER_5))  &studio_unlock  &trans         &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
         &Brak_anomalii  &kp F20               &kp F21               &mail_praca     &bootloader    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
 &trans  &jeden_user     &kp F23               &kp F24               &trans          &to 0          &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
                                               &trans                &trans          &trans         &trans   &trans   &trans
