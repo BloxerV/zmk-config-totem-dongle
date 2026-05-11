@@ -92,6 +92,13 @@
             bindings = <&kp M &kp DOT &kp P &kp Y &kp C &kp K &kp A &kp AT &kp F &kp U &kp T &kp U &kp E &kp R &kp M &kp I &kp N &kp D &kp DOT &kp C &kp O &kp M>;
             label = "MAIL_PRACA";
         };
+
+        mail: mail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp Y &kp C &kp K &kp A &kp M &kp A &kp T &kp E &kp U &kp S &kp Z &kp AT &kp P &kp M &kp DOT &kp M &kp E>;
+            label = "MAIL";
+        };
     };
 
     keymap {
@@ -121,7 +128,7 @@
             display-name = "Sym";
             bindings = <
         &kp EXCL  &kp AT  &kp HASH       &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
-        &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &trans     &trans         &trans           &login   &trans
+        &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &trans     &trans         &trans           &mail    &trans
 &trans  &trans    &trans  &kp PAGE_DOWN  &to 5       &to 4          &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
                           &trans         &trans      &trans         &trans     &trans         &trans
             >;
