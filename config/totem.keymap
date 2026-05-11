@@ -71,6 +71,20 @@
             bindings = <&kp W &kp SPACE &kp N &kp O &kp R &kp M &kp I &kp E &kp TAB &kp ENTER>;
             label = "W_NORMIE";
         };
+
+        jeden_user: jeden_user {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp SPACE &kp U &kp S &kp E &kp R &kp TAB &kp ENTER>;
+            label = "JEDEN_USER";
+        };
+
+        kopiuj_wklej_ciapki: kopiuj_wklej_ciapki {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RG(A) &kp DELETE &kp DOUBLE_QUOTES &kp LG(V) &kp DOUBLE_QUOTES &kp ENTER>;
+            label = "KOPIUJ_WKLEJ_CIAPKI";
+        };
     };
 
     keymap {
@@ -176,10 +190,10 @@
         mac_fun {
             display-name = "Fun";
             bindings = <
-        &Brak_anomalii  &kp F17  &kp F18  &studio_unlock  &trans         &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
-        &w_normie       &kp F20  &kp F21  &trans          &bootloader    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
-&trans  &kp F22         &kp F23  &kp F24  &trans          &to 0          &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
-                                 &trans   &trans          &trans         &trans   &trans   &trans
+        &w_normie       &kopiuj_wklej_ciapki  &kp F18  &studio_unlock  &trans         &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
+        &Brak_anomalii  &kp F20               &kp F21  &trans          &bootloader    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
+&trans  &jeden_user     &kp F23               &kp F24  &trans          &to 0          &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
+                                              &trans   &trans          &trans         &trans   &trans   &trans
             >;
         };
 
