@@ -82,7 +82,7 @@
         kopiuj_wklej_ciapki: kopiuj_wklej_ciapki {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(A) &kp DELETE &kp DOUBLE_QUOTES &kp LG(V) &kp DOUBLE_QUOTES &kp ENTER>;
+            bindings = <&kp LA(A) &kp DELETE &kp DOUBLE_QUOTES &kp LA(V) &kp DOUBLE_QUOTES &kp ENTER>;
             label = "KOPIUJ_WKLEJ_CIAPKI";
         };
 
