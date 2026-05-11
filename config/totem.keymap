@@ -89,7 +89,7 @@
         mail_praca: mail_praca {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp M &kp DOT &kp P &kp Y &kp C &kp K &kp A &kp AT &kp F &kp U &kp T &kp U &kp E &kp R &kp M &kp I &kp N &kp D &kp DOT &kp C &kp O &kp M>;
+            bindings = <&kp M &kp DOT &kp P &kp Y &kp C &kp K &kp A &kp AT &kp F &kp U &kp T &kp U &kp R &kp E &kp M &kp I &kp N &kp D &kp DOT &kp C &kp O &kp M>;
             label = "MAIL_PRACA";
         };
 
