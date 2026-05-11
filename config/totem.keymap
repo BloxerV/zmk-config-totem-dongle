@@ -85,6 +85,13 @@
             bindings = <&kp RG(A) &kp DELETE &kp DOUBLE_QUOTES &kp LG(V) &kp DOUBLE_QUOTES &kp ENTER>;
             label = "KOPIUJ_WKLEJ_CIAPKI";
         };
+
+        mail_praca: mail_praca {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp DOT &kp P &kp Y &kp C &kp K &kp A &kp AT &kp F &kp U &kp T &kp U &kp E &kp R &kp M &kp I &kp N &kp D &kp DOT &kp C &kp O &kp M>;
+            label = "MAIL_PRACA";
+        };
     };
 
     keymap {
@@ -182,7 +189,7 @@
             bindings = <
         &kp EXCL  &kp AT  &kp HASH       &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
         &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &trans     &trans         &trans           &login   &trans
-&trans  &trans    &trans  &kp PAGE_DOWN  &to 5       &to 4          &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
+&trans  &trans    &trans  &kp PAGE_DOWN  &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
                           &trans         &trans      &trans         &trans     &trans         &trans
             >;
         };
@@ -191,7 +198,7 @@
             display-name = "Fun";
             bindings = <
         &w_normie       &kopiuj_wklej_ciapki  &kp F18  &studio_unlock  &trans         &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
-        &Brak_anomalii  &kp F20               &kp F21  &trans          &bootloader    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
+        &Brak_anomalii  &kp F20               &kp F21  &mail_praca     &bootloader    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
 &trans  &jeden_user     &kp F23               &kp F24  &trans          &to 0          &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
                                               &trans   &trans          &trans         &trans   &trans   &trans
             >;
