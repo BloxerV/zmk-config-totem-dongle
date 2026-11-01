@@ -99,6 +99,20 @@
             bindings = <&kp A &kp P &kp L &kp I &kp K &kp A &kp C &kp J &kp A &kp SPACE &kp D &kp Z &kp I &kp A &kp A &kp TAB &kp ENTER>;
             label = "APLIKACJA_DZIALA";
         };
+
+        jeden_event: jeden_event {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp SPACE &kp E &kp V &kp E &kp N &kp T>;
+            label = "JEDEN_EVENT";
+        };
+
+        pushe: pushe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp U &kp S &kp H &kp E>;
+            label = "PUSHE";
+        };
     };
 
     keymap {
@@ -147,7 +161,7 @@
         cuts {
             bindings = <
          &kp N1  &kp N2  &kp N3     &kp N4    &kp N5       &trans  &trans    &kp UP    &trans     &to 7
-         &kp Q   &kp W   &kp E      &kp R     &kp T        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+         &kp Q   &kp W   &kp E      &kp R     &kp T        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &to 12
 &kp ESC  &kp Y   &kp B   &kp TAB    &kp D     &kp F        &trans  &trans    &trans    &trans     &trans  &trans
                          &kp LCTRL  &kp LALT  &kp SPACE    &trans  &trans    &trans
             >;
@@ -206,7 +220,7 @@
             bindings = <
         &w_normie       &kopiuj_wklej_ciapki  &kp LS(LA(NUMBER_5))  &studio_unlock  &trans         &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
         &Brak_anomalii  &aplikacja_dziala     &kp F21               &mail_praca     &bootloader    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
-&trans  &jeden_user     &kp LS(LA(A))         &kp LS(LA(SPACE))     &trans          &to 0          &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
+&trans  &jeden_user     &jeden_event          &pushe                &trans          &to 0          &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
                                               &trans                &trans          &trans         &trans   &trans   &trans
             >;
         };
@@ -214,9 +228,18 @@
         Mac_Cuts {
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &to 0
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &to 12
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &msc SCRL_LEFT  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_RIGHT
+        &trans  &trans  &trans  &trans  &trans    &to 7           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &msc SCRL_UP    &mkp MCLK       &msc SCRL_DOWN   &trans           &trans
+                        &trans  &trans  &trans    &trans          &trans          &trans
             >;
         };
     };
