@@ -10,12 +10,11 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 3000
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 40
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 3000
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 40   
-
 #include <dt-bindings/zmk/pointing.h>
 
 #define Base        0
@@ -107,14 +106,14 @@
         jeden_event: jeden_event {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N1 &kp SPACE &kp E &kp V &kp E &kp N &kp T>;
+            bindings = <&kp N1 &kp SPACE &kp E &kp V &kp E &kp N &kp T &kp ENTER>;
             label = "JEDEN_EVENT";
         };
 
         pushe: pushe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp P &kp U &kp S &kp H &kp E>;
+            bindings = <&kp P &kp U &kp S &kp H &kp E &kp ENTER>;
             label = "PUSHE";
         };
     };
@@ -165,7 +164,7 @@
         cuts {
             bindings = <
          &kp N1  &kp N2  &kp N3     &kp N4    &kp N5       &trans  &trans    &kp UP    &trans     &to 7
-         &kp Q   &kp W   &kp E      &kp R     &kp T        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &to 12
+         &kp Q   &kp W   &kp E      &kp R     &kp T        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &to 13
 &kp ESC  &kp Y   &kp B   &kp TAB    &kp D     &kp F        &trans  &trans    &trans    &trans     &trans  &trans
                          &kp LCTRL  &kp LALT  &kp SPACE    &trans  &trans    &trans
             >;
@@ -212,10 +211,10 @@
         Mac_Sym {
             display-name = "Sym";
             bindings = <
-        &kp EXCL  &kp AT  &kp HASH       &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
-        &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &trans     &trans         &trans           &trans   &trans
-&trans  &mail     &trans  &kp PAGE_DOWN  &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
-                          &trans         &trans      &trans         &trans     &trans         &trans
+        &kp EXCL  &kp AT  &kp HASH       &kp DOLLAR  &kp PERCENT    &kp CARET    &kp AMPERSAND   &kp KP_ASTERISK  &kp SQT               &kp DQT
+        &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &mail_praca  &Brak_anomalii  &to 13           &jeden_user           &jeden_event
+&trans  &mail     &trans  &kp PAGE_DOWN  &trans      &trans         &kp UNDER    &kp EQUAL       &w_normie        &kopiuj_wklej_ciapki  &kp SLASH     &kp HOME
+                          &trans         &trans      &trans         &trans       &trans          &trans
             >;
         };
 
@@ -232,9 +231,19 @@
         Mac_Cuts {
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &to 0
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &to 12
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &to 13
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        mouse_mac {
+            display-name = "Base";
+            bindings = <
+               &kp Q       &kp W       &kp E          &kp R         &kp T        &msc SCRL_LEFT  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_RIGHT
+               &hm LGUI A  &hm LALT S  &hm LCTRL D    &hm LSHIFT F  &kp G        &to 7           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &hm RGUI P
+&lt 10 ESCAPE  &kp Z       &kp X       &kp C          &kp V         &kp B        &kp N           &msc SCRL_UP    &mkp MCLK       &msc SCRL_DOWN   &kp SLASH        &lt 11 BACKSLASH
+                                       &mt LCTRL DEL  &lt 8 TAB     &kp SPACE    &kp RET         &lt 9 BSPC      &kp MINUS
             >;
         };
 
