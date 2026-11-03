@@ -106,15 +106,22 @@
         jeden_event: jeden_event {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N1 &kp SPACE &kp E &kp V &kp E &kp N &kp T &kp ENTER>;
+            bindings = <&kp N1 &kp SPACE &kp E &kp V &kp E &kp N &kp T &kp TAB &kp ENTER>;
             label = "JEDEN_EVENT";
         };
 
         pushe: pushe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp P &kp U &kp S &kp H &kp E &kp ENTER>;
+            bindings = <&kp P &kp U &kp S &kp H &kp E &kp TAB &kp ENTER>;
             label = "PUSHE";
+        };
+
+        known_issue: known_issue {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K &kp N &kp O &kp W &kp N &kp SPACE &kp I &kp S &kp S &kp U &kp E &kp TAB &kp ENTER>;
+            label = "KNOWN_ISSUE";
         };
     };
 
@@ -145,7 +152,7 @@
             display-name = "Sym";
             bindings = <
         &kp EXCL  &kp AT  &kp HASH       &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
-        &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &trans     &trans         &trans           &mail    &trans
+        &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &trans     &trans         &to 13           &mail    &trans
 &trans  &trans    &trans  &kp PAGE_DOWN  &to 5       &to 4          &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
                           &trans         &trans      &trans         &trans     &trans         &trans
             >;
@@ -212,7 +219,7 @@
             display-name = "Sym";
             bindings = <
         &kp EXCL  &kp AT  &kp HASH       &kp DOLLAR  &kp PERCENT    &kp CARET    &kp AMPERSAND   &kp KP_ASTERISK  &kp SQT               &kp DQT
-        &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &mail_praca  &Brak_anomalii  &to 13           &jeden_user           &jeden_event
+        &kp CAPS  &trans  &kp PAGE_UP    &trans      &trans         &mail_praca  &Brak_anomalii  &to 12           &jeden_user           &jeden_event
 &trans  &mail     &trans  &kp PAGE_DOWN  &trans      &trans         &kp UNDER    &kp EQUAL       &w_normie        &kopiuj_wklej_ciapki  &kp SLASH     &kp HOME
                           &trans         &trans      &trans         &trans       &trans          &trans
             >;
@@ -222,7 +229,7 @@
             display-name = "Fun";
             bindings = <
         &w_normie       &kopiuj_wklej_ciapki  &kp LS(LA(NUMBER_5))  &studio_unlock  &trans         &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
-        &Brak_anomalii  &aplikacja_dziala     &kp F21               &mail_praca     &bootloader    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
+        &Brak_anomalii  &aplikacja_dziala     &known_issue          &mail_praca     &bootloader    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
 &trans  &jeden_user     &jeden_event          &pushe                &trans          &to 0          &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
                                               &trans                &trans          &trans         &trans   &trans   &trans
             >;
@@ -250,7 +257,7 @@
         mouse {
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &msc SCRL_LEFT  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_RIGHT
-        &trans  &trans  &trans  &trans  &trans    &to 7           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &to 0
+        &trans  &trans  &trans  &trans  &trans    &to 0           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &msc SCRL_UP    &mkp MCLK       &msc SCRL_DOWN   &trans           &trans
                         &trans  &trans  &trans    &trans          &trans          &trans
             >;
